@@ -17,7 +17,7 @@ class Book(models.Model):
     )
 
     title = models.CharField(max_length=200, verbose_name='Book title')
-    author = models.ForeignKey('Author', on_delete=models.CASCADE, verbose_name='Author of the book')
+    author = models.CharField(max_length=200, verbose_name='Author of the book')
     genre = models.CharField(max_length=20, choices=BOOK_GENRES, help_text='Select a genre for this book')
 
     def __str__(self):
